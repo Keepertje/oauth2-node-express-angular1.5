@@ -5,17 +5,17 @@ angular.module('routespiration')
     var loginUrl = '/api/login';
 
 
-    loginUser = function(){
-        return $http.get(loginUrl)
+    loginUser = function(code){
+       return (
+         $http.get(loginUrl + '/' + code).then((response) =>
+         {
+             console.log(response.data)
+         })
+       )
     }
 
-    getUser = function(code){
-       return $http.get(loginUrl + '/' + code)
-          
-    }
 
     return {
-      loginUser:loginUser,
-      getUser:getUser
+      loginUser:loginUser
      };
 });

@@ -16,6 +16,10 @@ router.get('/how', function (req, res, next) {
     next();
 });
 
+router.get('/callback', function(req,res,next){
+    req.url = '/index.html';
+    next();
+})
 
 
 router.use(express.static(path.join(__dirname ,'../../public')));
