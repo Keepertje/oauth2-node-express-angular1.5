@@ -1,0 +1,20 @@
+{
+  "name": "oauth2expressangulardemo",
+  "version": "0.0.1",
+  "description": "Code demo",
+  "main": "backend/app.js",
+  "scripts": {
+    "start": "node app.js",
+    "postinstall": "bower install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cindy Berghuizen",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "^1.5.8",
+    "bower": "^1.7.9",
+    "express": "4.13.3",
+    "strava-v3": "^1.12.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+   "name": "oauth2expressangulardemo",
+  "version": "0.0.1",
+  "description": "Code demo",
+  "main": "backend/app.js",
+  "authors": [
+    "Cindy Berghuizen"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
