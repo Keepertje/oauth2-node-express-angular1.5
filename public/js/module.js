@@ -24,8 +24,7 @@ function MainComponent($window){
   var $ctrl = this;
 
   $ctrl.login = function(){
-    console.log('hello click?')
-      $window.location.href = "https://www.strava.com/oauth/authorize?client_id=13016+&response_type=code&redirect_uri=http://localhost:3000/callback";
+      $window.location.href = "https://www.strava.com/oauth/authorize?client_id=<CLIENT_ID>+&response_type=code&redirect_uri=http://localhost:3000/callback";
               
   }
 }
