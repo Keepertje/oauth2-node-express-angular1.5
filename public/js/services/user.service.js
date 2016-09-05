@@ -1,30 +1,20 @@
-angular.module('routespiration')
-    .factory('userService',function($http){
-
-
-    var user = {};
-    var userToken = "";
-
-    setUser = function(userInput){
-        console.log('setting user ', userInput)
-        user = userInput;
+angular.module('myapp')
+    .factory('userService',function($http, $localStorage){
+ 
+    isLoggedIn = function(){
+        return($localStorage.user !== null);
     }
-
-    getUser = function(){
-        console.log('the user ', user)
-        return user;
-    }
-
+ 
     setToken = function(token){
-        userToken = token
+        $localStorage.userToken = token
+       
     }
     getToken = function(){
-        return userToken;
+        return $localStorage.userToken;
     }
-    return {
-      getUser:getUser,
-      getToken:getToken,
-      setUser:setUser,
-      setToken:setToken
+    return {    
+      getToken:getToken,   
+      setToken:setToken,
+      isLoggedIn:isLoggedIn 
      };
 });

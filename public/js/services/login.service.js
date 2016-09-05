@@ -1,20 +1,18 @@
-angular.module('routespiration')
-    .factory('loginService',function($http, userService){
-
-
+angular.module('myapp')
+    .factory('loginService',function($http, $q, userService){
     var loginUrl = '/api/login';
-
-
-    loginUser = function(code){
-       return (
-         $http.get(loginUrl + '/' + code).then((response) =>
-         {
-             console.log(response.data)
+ 
+   loginUser = function(code){
+        
+         var login = $http.get(loginUrl + '/' + code).then(function(response){
+            var data = response.data;
+             if(data.access_token !== undefined && data.access_token !== null){   
+                userService.setToken(data.access_token)
+             }
          })
-       )
+ 
+         return login;
     }
-
-
     return {
       loginUser:loginUser
      };

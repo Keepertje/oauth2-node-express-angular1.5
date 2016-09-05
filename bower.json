@@ -1,5 +1,5 @@
 {
-   "name": "oauth2expressangulardemo",
+  "name": "oauth2expressangulardemo",
   "version": "0.0.1",
   "description": "Code demo",
   "main": "backend/app.js",
@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "ngstorage": "^0.3.11"
   }
 }
